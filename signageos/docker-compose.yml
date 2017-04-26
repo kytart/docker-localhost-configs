@@ -1,0 +1,10 @@
+version: "3"
+services:
+  rabbitmq:
+      image: rabbitmq:3-management
+      hostname: signageos
+      ports:
+        - "15672:15672" # RabbitMQ Managegment
+        - "5672:5672" # main port
+      volumes:
+        - ${RABBITMQ_BASE}:/var/lib/rabbitmq

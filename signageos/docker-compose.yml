@@ -8,3 +8,9 @@ services:
         - "5672:5672" # main port
       volumes:
         - ${RABBITMQ_BASE}:/var/lib/rabbitmq
+  mongodb:
+      image: mongo
+      ports:
+        - "27017:27017"
+      volumes:
+        - ${MONGODB_DATA_DIR}:/data/db
